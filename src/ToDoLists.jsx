@@ -1,6 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
+import CheckIcon from '@material-ui/icons/Check';
 
 const ToDoLists = (props) => {
+
+    const [line, setLine] = useState(false);
+
+    const cutIt = () => {
+        setLine(true);
+    };
   
     return (
     <>
@@ -12,7 +19,13 @@ const ToDoLists = (props) => {
                     props.onSelect(props.id);
                 }}
             />
-            <li> {props.text} </li> 
+
+            <span onClick={cutIt}>
+                <CheckIcon className="checkIcon"/>
+            </span>
+            <li style={{ textDecoration: line ? "line-through" : "none"}}> 
+            {props.text} 
+            </li> 
         </div>
     </>
     );
