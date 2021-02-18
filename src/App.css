@@ -17,7 +17,7 @@
 }
 
 .center_div {
-  width: 25%;
+  width: 50%;
   height: 80vh;
   background-color: #f6f5f5;
   box-shadow: 5px 5px 25px -5px rgba(0, 0, 0, 0.5);
@@ -57,7 +57,7 @@ button {
   border: none;
   outline: none;
   margin-left: 10px;
-  box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+  font-weight: 200;
 }
 
 button:hover {
@@ -69,7 +69,11 @@ ol {
 }
 
 ol li {
-  padding-left: 0px;
+  padding: 5px 5px;
+  background-color: #dee9ec;
+  width: 65%;
+  margin-top: 2px;
+  margin-bottom: 2px;
   text-align: left;
   font-size: 20px;
   font-weight: 500;
@@ -113,16 +117,30 @@ ol li {
   justify-content: center;
   align-items: center;
   background-color: #ccf2f4;
+  border: 1px solid #3b5360;
   border-radius: 50%;
   margin: 0 15px 0 0px;
   color: #3b5360;
   box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
 }
 .todo_style .checkIcon:hover {
-  background-color: #a6f0c6;
+  background-color: #7ef3b1;
 }
 .todo_style .fa-check-square:hover .list_style {
   color: #a6f0c6;
+}
+
+.todo_style .priorityBtn {
+  padding: 5px 5px;
+  background-color: #d38dc6;
+  color: #fff;
+  border: 1px solid #fff;
+  outline: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: medium;
+  min-height: 20px;
+  width: 30px;
 }
 
 @media (max-width: 768px) {
@@ -131,14 +149,20 @@ ol li {
   }
 
   .todo_style .fa-times {
-    margin: 0 15px 0 15px;
+    margin: 0 5px 0 15px;
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
+  .todo_style .priorityBtn {
+    margin: 0 10px 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .todo_style .checkIcon {
-    margin: 0 15px 0 15px;
+    margin: 0 10px 0 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -150,5 +174,6 @@ ol li {
     width: 40px;
     color: #fff;
     font-size: 30px;
+    font-weight: bold;
   }
 }
